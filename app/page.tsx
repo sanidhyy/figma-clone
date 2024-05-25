@@ -1,12 +1,5 @@
-import { CollaborativeApp } from "./collaborative-app";
-import { Room } from "./room";
-
 const HomePage = () => {
-  return (
-    <Room>
-      <CollaborativeApp />
-    </Room>
-  );
+  return <h1 className="text-7xl text-white">Hello, world!</h1>;
 };
 
 export default HomePage;
