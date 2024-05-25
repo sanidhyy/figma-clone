@@ -1,5 +1,5 @@
 import { COLORS } from "@/constants";
-import { LiveCursorProps } from "@/types/type";
+import type { LiveCursorProps } from "@/types/type";
 
 import { Cursor } from "./cursor";
 
