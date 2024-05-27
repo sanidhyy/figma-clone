@@ -18,15 +18,17 @@ import {
   renderCanvas,
 } from "@/lib/canvas";
 import { handleDelete, handleKeyDown } from "@/lib/key-events";
+import { handleImageUpload } from "@/lib/shapes";
 import { useMutation, useRedo, useStorage, useUndo } from "@/liveblocks.config";
 import type { ActiveElement } from "@/types/type";
 
 const HomePage = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
   const fabricRef = useRef<fabric.Canvas | null>(null);
   const isDrawing = useRef(false);
   const shapeRef = useRef<fabric.Object | null>(null);
-  const selectedShapeRef = useRef<string | null>("rectangle");
+  const selectedShapeRef = useRef<string | null>(null);
   const activeObjectRef = useRef<fabric.Object | null>(null);
 
   const [activeElement, setActiveElement] = useState<ActiveElement>({
@@ -86,6 +88,13 @@ const HomePage = () => {
           deleteShapeFromStorage
         );
         setActiveElement(defaultNavElement);
+
+        break;
+      case "image":
+        imageInputRef.current?.click();
+        isDrawing.current = false;
+
+        if (fabricRef.current) fabricRef.current.isDrawingMode = false;
 
         break;
       default:
@@ -162,7 +171,7 @@ const HomePage = () => {
         });
       });
     };
-  }, [canvasRef, syncShapeInStorage]);
+  }, [canvasRef, deleteShapeFromStorage, redo, syncShapeInStorage, undo]);
 
   useEffect(() => {
     renderCanvas({
@@ -177,6 +186,19 @@ const HomePage = () => {
       <Navbar
         activeElement={activeElement}
         handleActiveElement={handleActiveElement}
+        imageInputRef={imageInputRef}
+        handleImageUpload={(e) => {
+          e.stopPropagation();
+
+          if (!fabricRef?.current || !e.target?.files) return;
+
+          handleImageUpload({
+            file: e.target.files[0],
+            canvas: fabricRef as React.MutableRefObject<fabric.Canvas>,
+            shapeRef,
+            syncShapeInStorage,
+          });
+        }}
       />
 
       <section className="flex h-full flex-row">
