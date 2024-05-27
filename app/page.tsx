@@ -17,8 +17,8 @@ import {
   initializeFabric,
   renderCanvas,
 } from "@/lib/canvas";
-import { handleDelete } from "@/lib/key-events";
-import { useMutation, useStorage } from "@/liveblocks.config";
+import { handleDelete, handleKeyDown } from "@/lib/key-events";
+import { useMutation, useRedo, useStorage, useUndo } from "@/liveblocks.config";
 import type { ActiveElement } from "@/types/type";
 
 const HomePage = () => {
@@ -35,6 +35,8 @@ const HomePage = () => {
     icon: "",
   });
 
+  const undo = useUndo();
+  const redo = useRedo();
   const canvasObjects = useStorage((root) => root.canvasObjects);
 
   const syncShapeInStorage = useMutation(({ storage }, object) => {
@@ -138,6 +140,17 @@ const HomePage = () => {
 
     window.addEventListener("resize", () => {
       handleResize({ canvas });
+    });
+
+    window.addEventListener("keydown", (e: KeyboardEvent) => {
+      handleKeyDown({
+        e,
+        canvas: fabricRef.current,
+        undo,
+        redo,
+        syncShapeInStorage,
+        deleteShapeFromStorage,
+      });
     });
 
     return () => {
