@@ -18,7 +18,11 @@ import {
   type ReactionEvent,
 } from "@/types/type";
 
-export const Live = () => {
+type LiveProps = {
+  canvasRef: React.MutableRefObject<HTMLCanvasElement | null>;
+};
+
+export const Live = ({ canvasRef }: LiveProps) => {
   const others = useOthers();
   const broadcast = useBroadcastEvent();
   const [myPresence, updateMyPresence] = useMyPresence();
@@ -186,12 +190,15 @@ export const Live = () => {
 
   return (
     <div
+      id="canvas"
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
       className="h-screen w-full flex justify-center items-center text-center"
     >
+      <canvas ref={canvasRef} />
+
       {cursor && (
         <CursorChat
           cursor={cursor}
@@ -200,9 +207,11 @@ export const Live = () => {
           updateMyPresence={updateMyPresence}
         />
       )}
+
       {cursorState.mode === CursorMode.ReactionSelector && (
         <ReactionSelector setReaction={setReactions} />
       )}
+
       {reaction.map((react) => (
         <FlyingReaction
           key={react.timestamp.toString()}
@@ -212,8 +221,8 @@ export const Live = () => {
           value={react.value}
         />
       ))}
+
       <LiveCursors others={others} />
-      <h1 className="text-4xl text-white">Hello, world!</h1>;
     </div>
   );
 };

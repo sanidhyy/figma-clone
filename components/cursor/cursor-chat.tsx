@@ -39,6 +39,7 @@ export const CursorChat = ({
       style={{
         transform: `translateX(${cursor.x}px) translateY(${cursor.y}px)`,
       }}
+      onKeyUp={(e) => e.stopPropagation()}
     >
       {cursorState.mode === CursorMode.Chat && (
         <>

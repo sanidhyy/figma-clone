@@ -1,6 +1,7 @@
 import { fabric } from "fabric";
 import { v4 as uuid4 } from "uuid";
 
+import { defaultNavElement } from "@/constants";
 import {
   CanvasMouseDown,
   CanvasMouseMove,
@@ -11,7 +12,7 @@ import {
   CanvasSelectionCreated,
   RenderCanvas,
 } from "@/types/type";
-import { defaultNavElement } from "@/constants";
+
 import { createSpecificShape } from "./shapes";
 
 // initialize fabric canvas
