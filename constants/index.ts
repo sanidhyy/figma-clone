@@ -2,32 +2,32 @@ export const COLORS = ["#DC2626", "#D97706", "#059669", "#7C3AED", "#DB2777"];
 
 export const shapeElements = [
   {
-    icon: "/assets/rectangle.svg",
+    icon: "/rectangle.svg",
     name: "Rectangle",
     value: "rectangle",
   },
   {
-    icon: "/assets/circle.svg",
+    icon: "/circle.svg",
     name: "Circle",
     value: "circle",
   },
   {
-    icon: "/assets/triangle.svg",
+    icon: "/triangle.svg",
     name: "Triangle",
     value: "triangle",
   },
   {
-    icon: "/assets/line.svg",
+    icon: "/line.svg",
     name: "Line",
     value: "line",
   },
   {
-    icon: "/assets/image.svg",
+    icon: "/image.svg",
     name: "Image",
     value: "image",
   },
   {
-    icon: "/assets/freeform.svg",
+    icon: "/freeform.svg",
     name: "Free Drawing",
     value: "freeform",
   },
@@ -35,46 +35,46 @@ export const shapeElements = [
 
 export const navElements = [
   {
-    icon: "/assets/select.svg",
+    icon: "/select.svg",
     name: "Select",
     value: "select",
   },
   {
-    icon: "/assets/rectangle.svg",
+    icon: "/rectangle.svg",
     name: "Rectangle",
     value: shapeElements,
   },
   {
-    icon: "/assets/text.svg",
+    icon: "/text.svg",
     value: "text",
     name: "Text",
   },
   {
-    icon: "/assets/delete.svg",
+    icon: "/delete.svg",
     value: "delete",
     name: "Delete",
   },
   {
-    icon: "/assets/reset.svg",
+    icon: "/reset.svg",
     value: "reset",
     name: "Reset",
   },
   {
-    icon: "/assets/comments.svg",
+    icon: "/comments.svg",
     value: "comments",
     name: "Comments",
   },
 ];
 
 export const defaultNavElement = {
-  icon: "/assets/select.svg",
+  icon: "/select.svg",
   name: "Select",
   value: "select",
 };
 
 export const directionOptions = [
-  { label: "Bring to Front", value: "front", icon: "/assets/front.svg" },
-  { label: "Send to Back", value: "back", icon: "/assets/back.svg" },
+  { label: "Bring to Front", value: "front", icon: "/front.svg" },
+  { label: "Send to Back", value: "back", icon: "/back.svg" },
 ];
 
 export const fontFamilyOptions = [
@@ -159,20 +159,20 @@ export const fontWeightOptions = [
 ];
 
 export const alignmentOptions = [
-  { value: "left", label: "Align Left", icon: "/assets/align-left.svg" },
+  { value: "left", label: "Align Left", icon: "/align-left.svg" },
   {
     value: "horizontalCenter",
     label: "Align Horizontal Center",
-    icon: "/assets/align-horizontal-center.svg",
+    icon: "/align-horizontal-center.svg",
   },
-  { value: "right", label: "Align Right", icon: "/assets/align-right.svg" },
-  { value: "top", label: "Align Top", icon: "/assets/align-top.svg" },
+  { value: "right", label: "Align Right", icon: "/align-right.svg" },
+  { value: "top", label: "Align Top", icon: "/align-top.svg" },
   {
     value: "verticalCenter",
     label: "Align Vertical Center",
-    icon: "/assets/align-vertical-center.svg",
+    icon: "/align-vertical-center.svg",
   },
-  { value: "bottom", label: "Align Bottom", icon: "/assets/align-bottom.svg" },
+  { value: "bottom", label: "Align Bottom", icon: "/align-bottom.svg" },
 ];
 
 export const shortcuts = [
