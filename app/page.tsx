@@ -10,8 +10,11 @@ import { RightSidebar } from "@/components/right-sidebar";
 import {
   handleCanvasMouseDown,
   handleCanvasMouseMove,
+  handleCanvasMouseUp,
+  handleCanvasObjectModified,
   handleResize,
   initializeFabric,
+  renderCanvas,
 } from "@/lib/canvas";
 import { useMutation, useStorage } from "@/liveblocks.config";
 import type { ActiveElement } from "@/types/type";
@@ -22,6 +25,7 @@ const HomePage = () => {
   const isDrawing = useRef(false);
   const shapeRef = useRef<fabric.Object | null>(null);
   const selectedShapeRef = useRef<string | null>("rectangle");
+  const activeObjectRef = useRef<fabric.Object | null>(null);
 
   const [activeElement, setActiveElement] = useState<ActiveElement>({
     name: "",
@@ -74,6 +78,25 @@ const HomePage = () => {
       });
     });
 
+    canvas.on("mouse:up", () => {
+      handleCanvasMouseUp({
+        canvas,
+        isDrawing,
+        shapeRef,
+        selectedShapeRef,
+        syncShapeInStorage,
+        setActiveElement,
+        activeObjectRef,
+      });
+    });
+
+    canvas.on("object:modified", (options) => {
+      handleCanvasObjectModified({
+        options,
+        syncShapeInStorage
+      })
+    })
+
     window.addEventListener("resize", () => {
       handleResize({ canvas });
     });
@@ -85,7 +108,15 @@ const HomePage = () => {
         });
       });
     };
-  }, [canvasRef]);
+  }, [canvasRef, syncShapeInStorage]);
+
+  useEffect(() => {
+    renderCanvas({
+      fabricRef,
+      canvasObjects,
+      activeObjectRef,
+    });
+  }, [canvasObjects]);
 
   return (
     <main className="h-screen overflow-hidden">
