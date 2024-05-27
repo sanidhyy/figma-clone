@@ -7,6 +7,7 @@ import { LeftSidebar } from "@/components/left-sidebar";
 import { Live } from "@/components/live";
 import { Navbar } from "@/components/navbar";
 import { RightSidebar } from "@/components/right-sidebar";
+import { defaultNavElement } from "@/constants";
 import {
   handleCanvasMouseDown,
   handleCanvasMouseMove,
@@ -16,6 +17,7 @@ import {
   initializeFabric,
   renderCanvas,
 } from "@/lib/canvas";
+import { handleDelete } from "@/lib/key-events";
 import { useMutation, useStorage } from "@/liveblocks.config";
 import type { ActiveElement } from "@/types/type";
 
@@ -48,8 +50,45 @@ const HomePage = () => {
     canvasObjects.set(objectId, shapeData);
   }, []);
 
+  const deleteAllShapes = useMutation(({ storage }) => {
+    const canvasObjects = storage.get("canvasObjects");
+
+    if (!canvasObjects || canvasObjects.size === 0) return true;
+
+    for (const [key] of canvasObjects.entries()) {
+      canvasObjects.delete(key);
+    }
+
+    return canvasObjects.size === 0;
+  }, []);
+
+  const deleteShapeFromStorage = useMutation(({ storage }, objectId) => {
+    const canvasObjects = storage.get("canvasObjects");
+
+    canvasObjects.delete(objectId);
+  }, []);
+
   const handleActiveElement = (elem: ActiveElement) => {
     setActiveElement(elem);
+
+    switch (elem?.value) {
+      case "reset":
+        deleteAllShapes();
+        fabricRef.current?.clear();
+        setActiveElement(defaultNavElement);
+
+        break;
+      case "delete":
+        handleDelete(
+          fabricRef.current as fabric.Canvas,
+          deleteShapeFromStorage
+        );
+        setActiveElement(defaultNavElement);
+
+        break;
+      default:
+        break;
+    }
 
     selectedShapeRef.current = elem?.value as string;
   };
@@ -93,15 +132,17 @@ const HomePage = () => {
     canvas.on("object:modified", (options) => {
       handleCanvasObjectModified({
         options,
-        syncShapeInStorage
-      })
-    })
+        syncShapeInStorage,
+      });
+    });
 
     window.addEventListener("resize", () => {
       handleResize({ canvas });
     });
 
-    () => {
+    return () => {
+      canvas.dispose();
+
       window.removeEventListener("resize", () => {
         handleResize({
           canvas: null,
