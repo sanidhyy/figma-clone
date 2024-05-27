@@ -9,9 +9,11 @@ import { Navbar } from "@/components/navbar";
 import { RightSidebar } from "@/components/right-sidebar";
 import {
   handleCanvasMouseDown,
+  handleCanvasMouseMove,
   handleResize,
   initializeFabric,
 } from "@/lib/canvas";
+import { useMutation, useStorage } from "@/liveblocks.config";
 import type { ActiveElement } from "@/types/type";
 
 const HomePage = () => {
@@ -26,6 +28,21 @@ const HomePage = () => {
     value: "",
     icon: "",
   });
+
+  const canvasObjects = useStorage((root) => root.canvasObjects);
+
+  const syncShapeInStorage = useMutation(({ storage }, object) => {
+    if (!object) return;
+
+    const { objectId } = object;
+
+    const shapeData = object.toJSON();
+    shapeData.objectId = objectId;
+
+    const canvasObjects = storage.get("canvasObjects");
+
+    canvasObjects.set(objectId, shapeData);
+  }, []);
 
   const handleActiveElement = (elem: ActiveElement) => {
     setActiveElement(elem);
@@ -43,6 +60,17 @@ const HomePage = () => {
         isDrawing,
         shapeRef,
         selectedShapeRef,
+      });
+    });
+
+    canvas.on("mouse:move", (options) => {
+      handleCanvasMouseMove({
+        options,
+        canvas,
+        isDrawing,
+        shapeRef,
+        selectedShapeRef,
+        syncShapeInStorage,
       });
     });
 

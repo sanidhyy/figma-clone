@@ -104,7 +104,7 @@ export const handleCanvasMouseDown = ({
 };
 
 // handle mouse move event on canvas to draw shapes with different dimensions
-export const handleCanvaseMouseMove = ({
+export const handleCanvasMouseMove = ({
   options,
   canvas,
   isDrawing,

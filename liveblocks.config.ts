@@ -1,4 +1,4 @@
-import { LiveMap, createClient } from "@liveblocks/client";
+import { type LiveMap, createClient } from "@liveblocks/client";
 import { createRoomContext } from "@liveblocks/react";
 
 const client = createClient({
