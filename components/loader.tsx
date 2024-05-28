@@ -8,6 +8,7 @@ export const Loader = () => (
       width={100}
       height={100}
       className="object-contain"
+      unoptimized
     />
     <p className="text-sm font-bold text-primary-grey-300">Loading...</p>
   </div>
