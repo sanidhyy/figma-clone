@@ -12,7 +12,7 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 import { shortcuts } from "@/constants";
-import useInterval from "@/hooks/useInterval";
+import { useInterval } from "@/hooks/use-interval";
 import {
   useBroadcastEvent,
   useEventListener,
