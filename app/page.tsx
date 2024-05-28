@@ -15,6 +15,7 @@ import {
   handleCanvasObjectModified,
   handleCanvasObjectScaling,
   handleCanvasSelectionCreated,
+  handlePathCreated,
   handleResize,
   initializeFabric,
   renderCanvas,
@@ -171,6 +172,13 @@ const HomePage = () => {
       handleCanvasObjectScaling({
         options,
         setElementAttributes,
+      });
+    });
+
+    canvas.on("path:created", (options) => {
+      handlePathCreated({
+        options,
+        syncShapeInStorage,
       });
     });
 

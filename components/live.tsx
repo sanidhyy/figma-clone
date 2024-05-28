@@ -11,21 +11,14 @@ import {
   ContextMenuItem,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
-
+import { shortcuts } from "@/constants";
 import useInterval from "@/hooks/useInterval";
 import {
   useBroadcastEvent,
   useEventListener,
   useMyPresence,
-  useOthers,
 } from "@/liveblocks.config";
-import {
-  CursorMode,
-  type Reaction,
-  type CursorState,
-  type ReactionEvent,
-} from "@/types/type";
-import { shortcuts } from "@/constants";
+import { CursorMode, type Reaction, type CursorState } from "@/types/type";
 
 type LiveProps = {
   canvasRef: React.MutableRefObject<HTMLCanvasElement | null>;
@@ -34,21 +27,13 @@ type LiveProps = {
 };
 
 export const Live = ({ canvasRef, undo, redo }: LiveProps) => {
-  const others = useOthers();
   const broadcast = useBroadcastEvent();
-  const [myPresence, updateMyPresence] = useMyPresence();
+  const [{ cursor }, updateMyPresence] = useMyPresence();
 
   const [reaction, setReaction] = useState<Reaction[]>([]);
   const [cursorState, setCursorState] = useState<CursorState>({
     mode: CursorMode.Hidden,
   });
-
-  const { cursor } = myPresence as {
-    cursor: {
-      x: number;
-      y: number;
-    };
-  };
 
   useInterval(() => {
     setReaction((reaction) => {
@@ -215,7 +200,7 @@ export const Live = ({ canvasRef, undo, redo }: LiveProps) => {
   );
 
   useEventListener((eventData) => {
-    const event = eventData.event as ReactionEvent;
+    const event = eventData.event;
 
     setReaction((prevReaction) => {
       return prevReaction.concat([
@@ -263,7 +248,7 @@ export const Live = ({ canvasRef, undo, redo }: LiveProps) => {
           />
         ))}
 
-        <LiveCursors others={others} />
+        <LiveCursors />
 
         <Comments />
       </ContextMenuTrigger>
