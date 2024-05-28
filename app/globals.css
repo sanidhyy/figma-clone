@@ -8,6 +8,10 @@
   font-family: work sans, sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 @layer utilities {
   .no-ring {
     @apply outline-none ring-0 ring-offset-0 focus:ring-0 focus:ring-offset-0 focus-visible:ring-offset-0 !important;
