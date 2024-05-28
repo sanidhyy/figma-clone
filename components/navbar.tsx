@@ -57,7 +57,10 @@ export const Navbar = memo(
               ) : item?.value === "comments" ? (
                 // If value is comments, trigger the NewThread component
                 <NewThread>
-                  <Button className="relative w-5 h-5 object-contain">
+                  <Button
+                    className="relative w-5 h-5 object-contain"
+                    title={item.name}
+                  >
                     <Image
                       src={item.icon}
                       alt={item.name}
@@ -67,7 +70,10 @@ export const Navbar = memo(
                   </Button>
                 </NewThread>
               ) : (
-                <Button className="relative w-5 h-5 object-contain">
+                <Button
+                  className="relative w-5 h-5 object-contain"
+                  title={item.name}
+                >
                   <Image
                     src={item.icon}
                     alt={item.name}
