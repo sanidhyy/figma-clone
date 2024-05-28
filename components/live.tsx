@@ -196,7 +196,7 @@ export const Live = ({ canvasRef }: LiveProps) => {
       onPointerLeave={handlePointerLeave}
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
-      className="h-screen w-full flex justify-center items-center text-center"
+      className="relative h-full w-full flex flex-1 justify-center items-center"
     >
       <canvas ref={canvasRef} />
 
