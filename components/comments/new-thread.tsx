@@ -5,7 +5,7 @@ import * as Portal from "@radix-ui/react-portal";
 import { Slot } from "@radix-ui/react-slot";
 import {
   FormEvent,
-  ReactNode,
+  type PropsWithChildren,
   useCallback,
   useEffect,
   useRef,
@@ -20,11 +20,7 @@ import { PinnedComposer } from "./pinned-composer";
 
 type ComposerCoords = null | { x: number; y: number };
 
-type NewThreadProps = {
-  children: ReactNode;
-};
-
-export const NewThread = ({ children }: NewThreadProps) => {
+export const NewThread = ({ children }: PropsWithChildren) => {
   // set state to track if we're placing a new comment or not
   const [creatingCommentState, setCreatingCommentState] = useState<
     "placing" | "placed" | "complete"
