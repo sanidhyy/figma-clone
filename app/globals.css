@@ -5,7 +5,9 @@
 @import "@liveblocks/react-comments/styles.css";
 
 * {
-  font-family: work sans, sans-serif;
+  font-family:
+    work sans,
+    sans-serif;
 }
 
 body::-webkit-scrollbar {

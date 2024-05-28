@@ -32,7 +32,7 @@ export const ActiveUsers = () => {
           })}
 
           {hasMoreUsers && (
-            <div className=" bg-gray-400 min-w-[56px] w-14 h-14 ml-[-0.75rem] flex justify-center items-center text-white rounded-full border-4 border-white">
+            <div className=" ml-[-0.75rem] flex h-14 w-14 min-w-[56px] items-center justify-center rounded-full border-4 border-white bg-gray-400 text-white">
               +{users.length - 3}
             </div>
           )}
