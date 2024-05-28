@@ -1,11 +1,11 @@
 "use client";
 
-import { type ComposerSubmitComment } from "@liveblocks/react-comments/primitives";
+import { ComposerSubmitComment } from "@liveblocks/react-comments/primitives";
 import * as Portal from "@radix-ui/react-portal";
 import { Slot } from "@radix-ui/react-slot";
 import {
-  type FormEvent,
-  type PropsWithChildren,
+  FormEvent,
+  ReactNode,
   useCallback,
   useEffect,
   useRef,
@@ -20,7 +20,11 @@ import { PinnedComposer } from "./pinned-composer";
 
 type ComposerCoords = null | { x: number; y: number };
 
-export const NewThread = ({ children }: PropsWithChildren) => {
+type NewThreadProps = {
+  children: ReactNode;
+};
+
+export const NewThread = ({ children }: NewThreadProps) => {
   // set state to track if we're placing a new comment or not
   const [creatingCommentState, setCreatingCommentState] = useState<
     "placing" | "placed" | "complete"

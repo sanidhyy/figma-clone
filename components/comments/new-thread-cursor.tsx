@@ -5,10 +5,8 @@ import { useEffect, useState } from "react";
 
 const DEFAULT_CURSOR_POSITION = -10000;
 
-type NewThreadCursorProps = { display: boolean };
-
 // display a custom cursor when placing a new thread
-export const NewThreadCursor = ({ display }: NewThreadCursorProps) => {
+export const NewThreadCursor = ({ display }: { display: boolean }) => {
   const [coords, setCoords] = useState({
     x: DEFAULT_CURSOR_POSITION,
     y: DEFAULT_CURSOR_POSITION,

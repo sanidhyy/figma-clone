@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
+import { Comments } from "@/components/comments/comments";
 import { CursorChat } from "@/components/cursor/cursor-chat";
 import { LiveCursors } from "@/components/cursor/live-cursors";
 import { FlyingReaction } from "@/components/reaction/flying-reaction";
@@ -223,6 +224,8 @@ export const Live = ({ canvasRef }: LiveProps) => {
       ))}
 
       <LiveCursors others={others} />
+
+      <Comments />
     </div>
   );
 };
