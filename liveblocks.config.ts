@@ -6,43 +6,6 @@ import { ReactionEvent } from "@/types/type";
 const client = createClient({
   throttle: 16,
   publicApiKey: process.env.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY!,
-
-  async resolveUsers({ userIds }) {
-    // Used only for Comments. Return a list of user information retrieved
-    // from `userIds`. This info is used in comments, mentions etc.
-
-    // const usersData = await __fetchUsersFromDB__(userIds);
-    //
-    // return usersData.map((userData) => ({
-    //   name: userData.name,
-    //   avatar: userData.avatar.src,
-    // }));
-
-    return [];
-  },
-  async resolveMentionSuggestions({ text, roomId }) {
-    // Used only for Comments. Return a list of userIds that match `text`.
-    // These userIds are used to create a mention list when typing in the
-    // composer.
-    //
-    // For example when you type "@jo", `text` will be `"jo"`, and
-    // you should to return an array with John and Joanna's userIds:
-    // ["john@example.com", "joanna@example.com"]
-
-    // const userIds = await __fetchAllUserIdsFromDB__(roomId);
-    //
-    // Return all userIds if no `text`
-    // if (!text) {
-    //   return userIds;
-    // }
-    //
-    // Otherwise, filter userIds for the search `text` and return
-    // return userIds.filter((userId) =>
-    //   userId.toLowerCase().includes(text.toLowerCase())
-    // );
-
-    return [];
-  },
 });
 
 // Presence represents the properties that exist on every user in the Room
@@ -61,14 +24,6 @@ type Storage = {
   // author: LiveObject<{ firstName: string, lastName: string }>,
   // ...
   canvasObjects: LiveMap<string, any>;
-};
-
-// Optionally, UserMeta represents static/readonly metadata on each user, as
-// provided by your own custom auth back end (if used). Useful for data that
-// will not change during a session, like a user's name or avatar.
-type UserMeta = {
-  // id?: string,  // Accessible through `user.id`
-  // info?: Json,  // Accessible through `user.info`
 };
 
 // Optionally, the type of custom events broadcast and listened to in this
@@ -100,9 +55,6 @@ export const {
     useEventListener,
     useErrorListener,
     useStorage,
-    useObject,
-    useMap,
-    useList,
     useBatch,
     useHistory,
     useUndo,
@@ -122,7 +74,7 @@ export const {
     useAddReaction,
     useRemoveReaction,
   },
-} = createRoomContext<Presence, Storage, UserMeta, RoomEvent, ThreadMetadata>(
+} = createRoomContext<Presence, Storage, {}, RoomEvent, ThreadMetadata>(
   client,
   {}
 );

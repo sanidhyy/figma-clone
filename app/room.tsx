@@ -13,8 +13,7 @@ export const Room = ({ children }: PropsWithChildren) => {
       id="my-room"
       initialPresence={{
         cursor: null,
-        cursorColor: null,
-        editingText: null,
+        message: null,
       }}
       initialStorage={{
         canvasObjects: new LiveMap(),
