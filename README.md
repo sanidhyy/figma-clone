@@ -32,7 +32,7 @@
 - [Buy Me a Coffee](#coffee-buy-me-a-coffee)
 - [Follow Me](#rocket-follow-me)
 - [Learn More](#books-learn-more)
-- [Deploy on Vercel](#page_with_curl-deploy-on-netlify)
+- [Deploy on Netlify](#page_with_curl-deploy-on-netlify)
 - [Give A Star](#star-give-a-star)
 - [Star History](#star2-star-history)
 - [Give A Star](#star-give-a-star)
@@ -170,7 +170,7 @@ NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=pk_dev_PS_dLEIP5swJyoZM-hY_14Wb-OwrIOwoW12DTBV
 
 ## :gear: Tech Stack
 
-[![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Vercel](https://skillicons.dev/icons?i=vercel "Vercel")](https://vercel.app/ "Vercel")
+[![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Netlify](https://skillicons.dev/icons?i=netlify "Netlify")](https://netlify.app/ "Netlify")
 
 ## :wrench: Stats
 
