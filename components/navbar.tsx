@@ -10,6 +10,8 @@ import { navElements } from "@/constants";
 import type { ActiveElement, NavbarProps } from "@/types/type";
 
 import { ShapesMenu } from "./shapes-menu";
+import Link from "next/link";
+import { links } from "@/config";
 
 export const Navbar = memo(
   ({
@@ -78,7 +80,19 @@ export const Navbar = memo(
           ))}
         </ul>
 
-        <ActiveUsers />
+        <div className="md:flex items-center justify-center flex-row gap-x-6">
+          <ActiveUsers />
+
+          <Link
+            href={links.sourceCode}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hidden md:block"
+            title="Source Code"
+          >
+            <Image src="/github.svg" alt="GitHub" height={36} width={36} />
+          </Link>
+        </div>
       </nav>
     );
   },
