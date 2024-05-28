@@ -1,6 +1,6 @@
 {
   "name": "figma-clone",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +8,67 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "author": {
+    "name": "Sanidhya Kumar Verma",
+    "email": "sanidhya.verma12345@gmail.com",
+    "url": "https://github.com/sanidhyy"
+  },
+  "description": "A minimalist Figma clone using Fabric.js and Liveblocks for real-time collaboration.",
+  "keywords": [
+    "reactjs",
+    "nextjs",
+    "vercel",
+    "react",
+    "liveblocks",
+    "livekit",
+    "shadcn",
+    "shadcn-ui",
+    "radix-ui",
+    "cn",
+    "clsx",
+    "figma-clone",
+    "realtime-drawing",
+    "live-chat",
+    "live-reactions",
+    "live-updates",
+    "sonner",
+    "zustand",
+    "zod",
+    "lucide-react",
+    "next-themes",
+    "postcss",
+    "prettier",
+    "react-dom",
+    "tailwindcss",
+    "tailwindcss-animate",
+    "ui/ux",
+    "js",
+    "javascript",
+    "typescript",
+    "eslint",
+    "html",
+    "css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanidhyy/figma-clone.git"
+  },
+  "homepage": "https://github.com/sanidhyy/figma-clone#readme",
+  "bugs": {
+    "url": "https://github.com/sanidhyy/figma-clone/issues",
+    "email": "sanidhya.verma12345@gmail.com"
+  },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/sanidhy"
+    },
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/sanidhy"
+    }
+  ],
   "dependencies": {
     "@liveblocks/client": "^1.12.0",
     "@liveblocks/react": "^1.12.0",
