@@ -92,7 +92,7 @@
   },
   "devDependencies": {
     "@types/fabric": "^5.3.7",
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/uuid": "^9.0.8",
