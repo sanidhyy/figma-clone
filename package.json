@@ -91,7 +91,7 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "@types/fabric": "^5.3.7",
+    "@types/fabric": "^5.3.9",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
