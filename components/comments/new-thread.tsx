@@ -40,7 +40,7 @@ export const NewThread = ({ children }: PropsWithChildren) => {
   const [composerCoords, setComposerCoords] = useState<ComposerCoords>(null);
 
   // set state to track the last pointer event
-  const lastPointerEvent = useRef<PointerEvent>();
+  const lastPointerEvent = useRef<PointerEvent | null>(null);
 
   // set state to track if user is allowed to use the composer
   const [allowUseComposer, setAllowUseComposer] = useState(false);
