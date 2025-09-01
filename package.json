@@ -81,7 +81,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fabric": "^5.3.0",
-    "jspdf": "^3.0.1",
+    "jspdf": "^3.0.2",
     "lucide-react": "^0.511.0",
     "next": "14.2.13",
     "react": "19.1.0",
