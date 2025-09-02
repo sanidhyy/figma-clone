@@ -84,7 +84,7 @@
     "jspdf": "^3.0.1",
     "lucide-react": "^0.511.0",
     "next": "14.2.13",
-    "react": "19.1.0",
+    "react": "19.1.1",
     "react-dom": "19.1.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
@@ -93,7 +93,7 @@
   "devDependencies": {
     "@types/fabric": "^5.3.10",
     "@types/node": "^24",
-    "@types/react": "19.0.12",
+    "@types/react": "19.1.12",
     "@types/react-dom": "19.0.4",
     "@types/uuid": "^10.0.0",
     "eslint": "9",
