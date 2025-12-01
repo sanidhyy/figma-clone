@@ -94,7 +94,7 @@
     "@types/fabric": "^5.3.10",
     "@types/node": "^24",
     "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
+    "@types/react-dom": "19.2.3",
     "@types/uuid": "^11.0.0",
     "eslint": "9",
     "eslint-config-next": "16.0.1",
