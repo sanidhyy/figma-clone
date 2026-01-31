@@ -2,6 +2,7 @@
 
 import { Composer, ComposerProps } from "@liveblocks/react-comments";
 import Image from "next/image";
+import { useState } from "react";
 
 type PinnedComposerProps = {
   onComposerSubmit: ComposerProps["onComposerSubmit"];
@@ -11,13 +12,17 @@ export const PinnedComposer = ({
   onComposerSubmit,
   ...props
 }: PinnedComposerProps) => {
+  const [avatarUrl] = useState(() => {
+    return `https://liveblocks.io/avatars/avatar-${Math.floor(
+      Math.random() * 30
+    )}.png`;
+  });
+
   return (
     <div className="absolute flex gap-4" {...props}>
       <div className="relative flex h-9 w-9 select-none items-center justify-center rounded-bl-full rounded-br-full rounded-tl-md rounded-tr-full bg-white shadow">
         <Image
-          src={`https://liveblocks.io/avatars/avatar-${Math.floor(
-            Math.random() * 30
-          )}.png`}
+          src={avatarUrl}
           alt="someone"
           width={28}
           height={28}
