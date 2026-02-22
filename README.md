@@ -82,29 +82,24 @@ figma-clone/
     |-- use-max-zindex.ts
     |-- utils.ts
   |- public/
-  |- scripts/
-    |-- prod.ts
-    |-- reset.ts
-    |-- seed.ts
-  |- store/
-    |-- use-exit-modal.ts
-    |-- use-hearts-modal.ts
-    |-- use-practice-modal.ts
   |- types/
     |-- declaration.d.ts
     |-- type.ts
-  |- .env.local
   |- .env.example
-  |- .eslintrc.js
+  |- .env/.env.local
+  |- .eslintrc.json
   |- .gitignore
   |- .prettierrc.json
+  |- bun.lockb
   |- components.json
   |- environment.d.ts
+  |- eslint.config.mjs
+  |- favicon.ico
   |- liveblocks.config.ts
+  |- netlify.toml
   |- next.config.mjs
-  |- package-lock.json
   |- package.json
-  |- postcss.config.js
+  |- postcss.config.mjs
   |- tailwind.config.ts
   |- tsconfig.json
 ```
@@ -190,32 +185,36 @@ Useful resources and dependencies that are used in Figma Clone.
 - [@liveblocks/client](https://www.npmjs.com/package/@liveblocks/client): ^1.12.0
 - [@liveblocks/react](https://www.npmjs.com/package/@liveblocks/react): ^1.12.0
 - [@liveblocks/react-comments](https://www.npmjs.com/package/@liveblocks/react-comments): ^1.12.0
-- [@radix-ui/react-context-menu](https://www.npmjs.com/package/@radix-ui/react-context-menu): ^2.1.5
-- [@radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu): ^2.0.6
-- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.0.2
-- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.0.0
-- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.0.2
-- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.0
+- [@radix-ui/react-context-menu](https://www.npmjs.com/package/@radix-ui/react-context-menu): ^2.2.16
+- [@radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu): ^2.1.16
+- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.7
+- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.2.6
+- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
+- [@types/fabric](https://www.npmjs.com/package/@types/fabric): ^5.3.10
+- [@types/node](https://www.npmjs.com/package/@types/node): ^24
+- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.10
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
+- [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^11.0.0
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
-- [fabric](https://www.npmjs.com/package/fabric): ^5.3.0
-- [jspdf](https://www.npmjs.com/package/jspdf): ^2.5.1
-- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.379.0
-- [next](https://www.npmjs.com/package/next): 14.2.3
-- [react](https://www.npmjs.com/package/react): ^18
-- [react-dom](https://www.npmjs.com/package/react-dom): ^18
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.3.0
-- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
-- [uuid](https://www.npmjs.com/package/uuid): ^9.0.1
-- [@types/fabric](https://www.npmjs.com/package/@types/fabric): ^5.3.7
-- [@types/node](https://www.npmjs.com/package/@types/node): ^20
-- [@types/react](https://www.npmjs.com/package/@types/react): ^18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18
-- [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^9.0.8
-- [eslint](https://www.npmjs.com/package/eslint): ^8
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.2.3
+- [eslint](https://www.npmjs.com/package/eslint): 9
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.1.6
+- [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports): ^4.3.0
+- [fabric](https://www.npmjs.com/package/fabric): ^5.5.2
+- [jspdf](https://www.npmjs.com/package/jspdf): ^4.0.0
+- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.552.0
+- [next](https://www.npmjs.com/package/next): 16.1.6
 - [postcss](https://www.npmjs.com/package/postcss): ^8
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.1
+- [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
+- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.7.2
+- [react](https://www.npmjs.com/package/react): 19.2.4
+- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.4
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.3.1
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
+- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
 - [typescript](https://www.npmjs.com/package/typescript): ^5
+- [uuid](https://www.npmjs.com/package/uuid): ^11.1.0
+
 <!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
