@@ -96,7 +96,7 @@
     "@types/react": "19.2.10",
     "@types/react-dom": "19.2.3",
     "@types/uuid": "^11.0.0",
-    "eslint": "9",
+    "eslint": "10",
     "eslint-config-next": "16.1.6",
     "eslint-plugin-unused-imports": "^4.3.0",
     "postcss": "^8",
