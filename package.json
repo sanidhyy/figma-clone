@@ -86,7 +86,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "next": "16.1.6",
-    "tailwind-merge": "^3.3.1",
+    "tailwind-merge": "^3.5.0",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0"
   },
