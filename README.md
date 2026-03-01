@@ -197,7 +197,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^11.0.0
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
-- [eslint](https://www.npmjs.com/package/eslint): 9
+- [eslint](https://www.npmjs.com/package/eslint): 10
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.1.6
 - [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports): ^4.3.0
 - [fabric](https://www.npmjs.com/package/fabric): ^5.5.2
