@@ -97,7 +97,7 @@
     "@types/react-dom": "19.2.3",
     "@types/uuid": "^11.0.0",
     "eslint": "10",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "16.2.2",
     "eslint-plugin-unused-imports": "^4.4.1",
     "postcss": "^8",
     "prettier": "^3.8.1",
