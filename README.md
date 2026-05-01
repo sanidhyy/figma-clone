@@ -202,7 +202,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.2.4
 - [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports): ^4.4.1
 - [fabric](https://www.npmjs.com/package/fabric): ^5.5.2
-- [jspdf](https://www.npmjs.com/package/jspdf): ^4.0.0
+- [jspdf](https://www.npmjs.com/package/jspdf): ^4.2.1
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^1.14.0
 - [next](https://www.npmjs.com/package/next): 16.2.3
 - [postcss](https://www.npmjs.com/package/postcss): ^8
