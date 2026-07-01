@@ -189,7 +189,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [@radix-ui/react-context-menu](https://www.npmjs.com/package/@radix-ui/react-context-menu): ^2.2.16
 - [@radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu): ^2.1.19
 - [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.11
-- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.2.6
+- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.3.2
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
 - [@types/fabric](https://www.npmjs.com/package/@types/fabric): ^5.3.11
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25
