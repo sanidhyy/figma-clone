@@ -214,7 +214,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
 - [typescript](https://www.npmjs.com/package/typescript): ^6
-- [uuid](https://www.npmjs.com/package/uuid): ^13.0.0
+- [uuid](https://www.npmjs.com/package/uuid): ^14.0.1
 
 <!--- DEPENDENCIES_END --->
 
