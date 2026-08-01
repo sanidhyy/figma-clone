@@ -192,7 +192,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.3.2
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
 - [@types/fabric](https://www.npmjs.com/package/@types/fabric): ^5.3.11
-- [@types/node](https://www.npmjs.com/package/@types/node): ^25
+- [@types/node](https://www.npmjs.com/package/@types/node): ^26
 - [@types/react](https://www.npmjs.com/package/@types/react): 19.2.17
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
 - [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^11.0.0
