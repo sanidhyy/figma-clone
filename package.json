@@ -88,7 +88,7 @@
     "next": "16.2.11",
     "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.1"
   },
   "devDependencies": {
     "@types/fabric": "^5.3.11",
