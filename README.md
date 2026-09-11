@@ -212,7 +212,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [fabric](https://www.npmjs.com/package/fabric): ^5.5.2
 - [jspdf](https://www.npmjs.com/package/jspdf): ^4.2.1
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^1.37.0
-- [next](https://www.npmjs.com/package/next): 16.2.11
+- [next](https://www.npmjs.com/package/next): 16.3.3
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [prettier](https://www.npmjs.com/package/prettier): ^3.9.6
 - [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
