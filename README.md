@@ -202,7 +202,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [@types/fabric](https://www.npmjs.com/package/@types/fabric): ^5.3.11
 - [@types/node](https://www.npmjs.com/package/@types/node): ^26
 - [@types/react](https://www.npmjs.com/package/@types/react): 19.2.17
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.3.0
 - [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^11.0.0
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
@@ -217,7 +217,7 @@ Useful resources and dependencies that are used in Figma Clone.
 - [prettier](https://www.npmjs.com/package/prettier): ^3.9.6
 - [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
 - [react](https://www.npmjs.com/package/react): 19.2.7
-- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.7
+- [react-dom](https://www.npmjs.com/package/react-dom): 19.3.0
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
