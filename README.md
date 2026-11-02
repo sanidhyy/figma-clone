@@ -44,7 +44,6 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 figma-clone/
   |- app/
@@ -92,7 +91,6 @@ figma-clone/
   |- .eslintrc.json
   |- .gitignore
   |- .prettierrc.json
-  |- bun.lockb
   |- components.json
   |- environment.d.ts
   |- eslint.config.mjs
@@ -101,11 +99,12 @@ figma-clone/
   |- netlify.toml
   |- next.config.mjs
   |- package.json
+  |- pnpm-lock.yaml
+  |- pnpm-workspace.yaml
   |- postcss.config.mjs
   |- tailwind.config.ts
   |- tsconfig.json
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -193,7 +192,6 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Figma Clone.
 
 <!--- DEPENDENCIES_START --->
-
 - [@liveblocks/client](https://www.npmjs.com/package/@liveblocks/client): ^1.12.0
 - [@liveblocks/react](https://www.npmjs.com/package/@liveblocks/react): ^1.12.0
 - [@liveblocks/react-comments](https://www.npmjs.com/package/@liveblocks/react-comments): ^1.12.0
