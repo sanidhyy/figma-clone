@@ -44,6 +44,7 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 figma-clone/
   |- app/
@@ -104,6 +105,7 @@ figma-clone/
   |- tailwind.config.ts
   |- tsconfig.json
 ```
+
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -152,9 +154,9 @@ NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=pk_dev_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
    - Save the changes to the `.env.local` file.
 
-4. Install Project Dependencies using `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
+4. Install Project Dependencies using `npm install --legacy-peer-deps` or `pnpm install --legacy-peer-deps`.
 
-5. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `yarn dev`.
+5. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `pnpm dev`.
 
 **NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
 
@@ -191,6 +193,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Figma Clone.
 
 <!--- DEPENDENCIES_START --->
+
 - [@liveblocks/client](https://www.npmjs.com/package/@liveblocks/client): ^1.12.0
 - [@liveblocks/react](https://www.npmjs.com/package/@liveblocks/react): ^1.12.0
 - [@liveblocks/react-comments](https://www.npmjs.com/package/@liveblocks/react-comments): ^1.12.0
