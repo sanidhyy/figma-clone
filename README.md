@@ -201,8 +201,8 @@ Useful resources and dependencies that are used in Figma Clone.
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.3.3
 - [@types/fabric](https://www.npmjs.com/package/@types/fabric): ^5.3.11
 - [@types/node](https://www.npmjs.com/package/@types/node): ^26
-- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.17
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.3.0
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19
 - [@types/uuid](https://www.npmjs.com/package/@types/uuid): ^11.0.0
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
@@ -216,8 +216,8 @@ Useful resources and dependencies that are used in Figma Clone.
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [prettier](https://www.npmjs.com/package/prettier): ^3.9.10
 - [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
-- [react](https://www.npmjs.com/package/react): 19.2.7
-- [react-dom](https://www.npmjs.com/package/react-dom): 19.3.0
+- [react](https://www.npmjs.com/package/react): 19.3.1
+- [react-dom](https://www.npmjs.com/package/react-dom): 19.3.1
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
