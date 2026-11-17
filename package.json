@@ -82,7 +82,7 @@
     "clsx": "^2.1.1",
     "fabric": "^5.5.2",
     "jspdf": "^4.2.1",
-    "lucide-react": "^1.48.0",
+    "lucide-react": "^1.73.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "next": "16.4.1",
